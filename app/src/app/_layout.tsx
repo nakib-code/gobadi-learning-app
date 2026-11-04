@@ -1,3 +1,4 @@
+import ReduxProvider from "@/providers/ReduxProvider";
 import { Stack } from "expo-router";
 
 function RootNavigator() {
@@ -11,5 +12,9 @@ function RootNavigator() {
   );
 }
 export default function RootLayout() {
-  return <RootNavigator />;
+  return (
+    <ReduxProvider>
+      <RootNavigator />
+    </ReduxProvider>
+  );
 }
